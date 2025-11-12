@@ -1,0 +1,14 @@
+# Terraform
+infra/.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+infra/*.tfstate
+# SSH keys
+id_rsa*
+*.pem
+
+# Editor
+.vscode/
+.idea/
+.DS_Store
