@@ -12,5 +12,5 @@ variable "admin_username" {
 
 variable "ssh_public_key" {
   description = "path to your SSH public key"
-  default     = "C:\\Users\\Pat_r\\.ssh\\id_rsa.pub"
+  default     = "~/.ssh/id_rsa_ansible"
 }
