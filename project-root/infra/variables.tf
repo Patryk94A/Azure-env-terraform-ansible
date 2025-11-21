@@ -12,5 +12,5 @@ variable "admin_username" {
 
 variable "ssh_public_key" {
   description = "path to your SSH public key"
-  default     = "~/.ssh/id_rsa_ansible"
+  default     = "/home/xdpo/.ssh/id_rsa_ansible.pub"
 }

@@ -1,0 +1,10 @@
+- name: Ping testowy
+  ansible.builtin.ping:
+
+- name: Zainstaluj pakiety podstawowe
+  ansible.builtin.package:
+    name:
+      - git
+      - curl
+      - vim
+    state: present
