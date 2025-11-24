@@ -8,25 +8,28 @@ This project demonstrates a simple **IaC (Infrastructure as Code)** setup using 
 
 ```bash
 project-root/
-├── infra/                    
-│   ├── main.tf               
-│   ├── provider.tf         
-│   ├── variables.tf          
-│   ├── outputs.tf            
-│   ├── modules/
-│   │   └── vm/              
-│   │       ├── main.tf
-│   │       ├── variables.tf
-│   │       └── outputs.tf
-│   └── network.tf           
-│
-├── ansible/              
-│   ├── inventory/
-│   └── playbooks/
-│
-├── .gitignore
+├── infra/
+│   ├── main.tf
+│   ├── variables.tf
+│   ├── outputs.tf
+│   ├── provider.tf
+│   ├── network.tf
+│   └── modules/
+│       └── vm/
+│           ├── main.tf
+│           ├── variables.tf
+│           └── outputs.tf
+├── ansible/
+│   ├── ansible.cfg
+│   ├── inventory.ini
+│   ├── site.yml
+│   └── roles/
+│       └── common/
+│           └── tasks/main.yml
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
 └── README.md
-
 
 ---
 
@@ -36,13 +39,7 @@ project-root/
 - Deploys 3 Ubuntu VMs using a reusable Terraform module
 - Each VM gets its own public IP and network interface
 - Outputs public IPs (usable later by Ansible inventory)
+- Configuration using Ansible
 ---
-
-## ⚙️ Requirements
-
-- Terraform ≥ 1.6
-- Azure CLI (for authentication)
-- Ansible (optional, for configuration)
-- Access to an Azure subscription
-
+## ☁️ Planning on adding Github Actions to it.
 ---
